@@ -59,6 +59,7 @@ ItemDisplay[yps]: %GREEN%* %GRAY%Antidote
 //Hide Smaller Piles of Gold
 ItemDisplay[GOLD<100 DIFF>0]:
 ItemDisplay[GOLD<500 DIFF>1]:
+ItemDisplay[GOLD<2500 DIFF=2]:
 
 
 //Gems ----------------------------------------------------------------
@@ -95,9 +96,9 @@ ItemDisplay[GEM=0 AND GEMTYPE=6]: %YELLOW%%NAME%%PX-0C%
 ItemDisplay[GEMTYPE=6 DIFF<1]: %YELLOW%%NAME%
 
 //7:Skull
-ItemDisplay[GEM>3 AND GEMTYPE=7]: %WHITE%%NAME%%PX-20%{%GRAY%%NL%Shields: Attacker Takes (4-20) Damage%NL%Armor: Regen Mana (8-19%) & Life +(2-5) %NL%Weapons: (1-4%) Life & Mana Stolen Per Hit%NL%}
-ItemDisplay[GEM=0 AND GEMTYPE=7]: %WHITE%%NAME%%PX-20%
-ItemDisplay[GEMTYPE=7 DIFF<1]: %WHITE%%NAME%
+ItemDisplay[GEM>3 AND GEMTYPE=7]: %GRAY%%NAME%%PX-20%{%GRAY%%NL%Shields: Attacker Takes (4-20) Damage%NL%Armor: Regen Mana (8-19%) & Life +(2-5) %NL%Weapons: (1-4%) Life & Mana Stolen Per Hit%NL%}
+ItemDisplay[GEM=0 AND GEMTYPE=7]: %GRAY%%NAME%%PX-20%
+ItemDisplay[GEMTYPE=7 DIFF<1]: %GRAY%%NAME%
 
 
 //Weapons & Armor -----------------------------------------------------
@@ -105,15 +106,12 @@ ItemDisplay[GEMTYPE=7 DIFF<1]: %WHITE%%NAME%
 //Show Socketed Items
 ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%] %CONTINUE%
 
-//Show Completed Runeword Items
-ItemDisplay[RW]: %ORANGE%%NAME%
-
 //Hide Low Level Base Eth Items on Hell
 ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
 
 //Show Ethereal Items
-ItemDisplay[ETH AND SOCK=0]: %NAME%%NL%%WHITE%Ethereal
-ItemDisplay[ETH AND SOCK>0]: %NAME%%NL%%WHITE%Ethereal%CONTINUE%
+ItemDisplay[ETH AND SOCK=0]: %NAME%%NL%%GRAY%Ethereal
+ItemDisplay[ETH AND SOCK>0]: %NAME%%NL%%GRAY%Ethereal%CONTINUE%
 
 //Hide Single Socketed Items
 ItemDisplay[SOCK=1 !MAG !RARE !UNI !SET !CRAFT]:
