@@ -16,7 +16,7 @@ ItemDisplay[RUNE>0]: %RUNENAME% Rune [%RUNENUM%]{%GRAY%Cube to swap between stac
 //Show Item Notifications
 ItemDisplay[RARE]: %NAME%%DOT-0C%%CONTINUE%//Rares
 ItemDisplay[RUNE>0]: %NAME%%DOT-62%//Runes
-ItemDisplay[cm1 OR cm2 OR cm3]: %NAME%%DOT-97%//Charms
+ItemDisplay[cm1 OR cm2 OR cm3 OR jew]: %NAME%%DOT-97%//Charms & Jewels
 ItemDisplay[wss]: %NAME%%DOT-9B%{Corrupts an item, modifying it unpredictably}//WorldStone
 ItemDisplay[UNI]: %NAME%%DOT-63%%CONTINUE%//Uniques
 ItemDisplay[SET]: %NAME%%DOT-7D%%CONTINUE%//Set Items
@@ -112,7 +112,10 @@ ItemDisplay[CRAFT]: %NAME%%DOT-63%
 ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
 
 //Hide Magic Items, except Maps, Charms and Accesories!
-ItemDisplay[MAG !AXE !hlm !xlm !ulm !plt !xlt !ult !spk !xpk !upk !vgl !xvg !uvg !mbl !zmb !umc !tbt !xtb !utb !SCEPTER !STAFF !WAND !msk !xsk !usk !ltp !xtp !utp !sml !xml !uml !lgl !xlg !ulg !vbl !zvb !uvc !lbt !xlb !ulb !MACE !fhl !xhl !uhl !fld !xld !uld !gts !xts !uts !mgl !xmg !umg !tbl !ztb !utc !mbt !xmb !umb !JAV !SPEAR !crn !xrn !urn !brs !xrs !urs !kit !xit !uit !hgl !xhg !uhg !lbl !zlb !ulc !mbt !xmb !umb !RW !cm1 !cm2 !cm3 !jew !rin !amu !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18]:
+ItemDisplay[MAG !ETH !AXE !hlm !xlm !ulm !plt !xlt !ult !spk !xpk !upk !vgl !xvg !uvg !mbl !zmb !umc !tbt !xtb !utb !SCEPTER !STAFF !WAND !msk !xsk !usk !ltp !xtp !utp !sml !xml !uml !lgl !xlg !ulg !vbl !zvb !uvc !lbt !xlb !ulb !MACE !fhl !xhl !uhl !fld !xld !uld !gts !xts !uts !mgl !xmg !umg !tbl !ztb !utc !mbt !xmb !umb !JAV !SPEAR !crn !xrn !urn !brs !xrs !urs !kit !xit !uit !hgl !xhg !uhg !lbl !zlb !ulc !mbt !xmb !umb !RW !cm1 !cm2 !cm3 !jew !rin !amu !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18]:
+
+//Show Ethereal
+ItemDisplay[ETH]: %NAME%%NL%%GRAY%Ethereal%CONTINUE%
 
 //Show Magic Crafting Recipes
 //Blood Items-------------------
@@ -208,14 +211,9 @@ ItemDisplay[MAG AND (mbt OR xmb OR umb) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + 
 ItemDisplay[MAG AND umb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ort Rune + Perfect Emerald}
 
 //Magic Amulets
-ItemDisplay[MAG AND (amu)]: %NAME%{%GRAY%Safe:Jewel+Thul+PerfectEmerald%NL%Power:Jewel+Thul+PerfectSapphire%NL%Caster:Jewel+Ral+PerfectAmethyst%NL%Blood:Jewel+Amn+PerfectRuby}
+ItemDisplay[MAG AND amu]: %NAME%{%GRAY%Safe:Jewel+Thul+PerfectEmerald%NL%Power:Jewel+Thul+PerfectSapphire%NL%Caster:Jewel+Ral+PerfectAmethyst%NL%Blood:Jewel+Amn+PerfectRuby}
 //Magic Rings
-ItemDisplay[MAG AND (rin)]: %NAME%{%GRAY%Safe:Jewel+Amn+PerfectEmerald%NL%Power:Jewel+Amn+PerfectSapphire%NL%Caster:Jewel+Amn+PerfectAmethyst%NL%Blood:Jewel+Sol+PerfectRuby}
-
-//Show Ethereal Items
-ItemDisplay[ETH AND SOCK=0 !NMAG DIFF<2]: %NAME%%NL%%GRAY%Ethereal
-ItemDisplay[ETH AND SOCK=0 DIFF=2]: %NAME%%NL%%GRAY%Ethereal
-ItemDisplay[ETH AND SOCK>0]: %NAME%%NL%%GRAY%Ethereal%CONTINUE%
+ItemDisplay[MAG AND rin]: %NAME%{%GRAY%Safe:Jewel+Amn+PerfectEmerald%NL%Power:Jewel+Amn+PerfectSapphire%NL%Caster:Jewel+Amn+PerfectAmethyst%NL%Blood:Jewel+Sol+PerfectRuby}
 
 //Hide Single Socketed Items
 ItemDisplay[SOCK=1 !MAG !RARE !UNI !SET !CRAFT]:
@@ -224,7 +222,7 @@ ItemDisplay[SOCK=1 !MAG !RARE !UNI !SET !CRAFT]:
 ItemDisplay[SOCK>0 AND NORM !RW !RARE !leg !UNI !SET !CRAFT DIFF=1]:
 
 //Hide Socketed Normal & Exceptional Items on Hell
-ItemDisplay[SOCK>0 AND NORM OR EXC !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
+ItemDisplay[SOCK>0 AND NORM OR EXC !ETH !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
 
 //Hide Inferior Armor and Weapons (Crude, Damaged, Cracked etc)
 ItemDisplay[INF (ARMOR OR WEAPON)]:
@@ -233,7 +231,7 @@ ItemDisplay[INF (ARMOR OR WEAPON)]:
 ItemDisplay[NMAG OR MAG AND NORM AND (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=1]:
 
 //Hide Normal & Exceptional Items on Hell 
-ItemDisplay[NMAG OR MAG AND NORM OR EXC AND (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
+ItemDisplay[NMAG OR MAG AND NORM OR EXC AND (ARMOR OR WEAPON) !ETH !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
 
 //Show Elite Crafting Bases
 ItemDisplay[NMAG OR MAG AND ELT AND (ARMOR OR WEAPON) AND SOCK=0 ILVL>71 !RW !RARE !UNI !SET !CRAFT]: %NAME%
@@ -299,5 +297,5 @@ ItemDisplay[WEAPON AND SOCK=6 !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Bre
 //Reset -----------------------------------------------------------------
 
 //Hide Regular Non-Socketed Items, except Maps, Quest items, Potions and Tomes after lvl 19!
-ItemDisplay[NMAG AND SOCK=0 !RW !bks !bkd !hdm !ass !box !msf !vip !hst !j34 !g34 !xyz !g33 !bbb !qbr !qey !qhr !qf1 !qf2 !mss !hfh !ice !tr2 !tes !ceh !bet !fed !toa !pk1 !pk2 !pk3 !dhn !bey !mbr !wss !lbox !dcma !dcbl !dcho !dcso !imra !imma !scou !rera !upma !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18 !key !leg !std !hp1 !hp2 !hp3 !hp4 !hp5 !mp1 !mp2 !mp3 !mp4 !mp5 !rvl !rvs !tsc !isc !tbk !ibk CLVL>19]:
+ItemDisplay[NMAG AND SOCK=0 !ETH !RW !bks !bkd !hdm !ass !box !msf !vip !hst !j34 !g34 !xyz !g33 !bbb !qbr !qey !qhr !qf1 !qf2 !mss !hfh !ice !tr2 !tes !ceh !bet !fed !toa !pk1 !pk2 !pk3 !dhn !bey !mbr !wss !lbox !dcma !dcbl !dcho !dcso !imra !imma !scou !rera !upma !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18 !key !leg !std !hp1 !hp2 !hp3 !hp4 !hp5 !mp1 !mp2 !mp3 !mp4 !mp5 !rvl !rvs !tsc !isc !tbk !ibk]:
 
