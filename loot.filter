@@ -102,6 +102,9 @@ ItemDisplay[GEMTYPE=7 DIFF<1]: %WHITE%%NAME%
 
 //Weapons & Armor -----------------------------------------------------
 
+//Show Socketed Items
+ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%] %CONTINUE%
+
 //Show Completed Runeword Items
 ItemDisplay[RW]: %ORANGE%%NAME%
 
@@ -110,10 +113,7 @@ ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
 
 //Show Ethereal Items
 ItemDisplay[ETH AND SOCK=0]: %NAME%%NL%%WHITE%Ethereal
-ItemDisplay[ETH AND SOCK>0]: %NAME% [%SOCKETS%] %NL%%WHITE%Ethereal
-
-//Show Socketed Items
-ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%] %CONTINUE%
+ItemDisplay[ETH AND SOCK>0]: %NAME%%NL%%WHITE%Ethereal%CONTINUE%
 
 //Hide Single Socketed Items
 ItemDisplay[SOCK=1 !MAG !RARE !UNI !SET !CRAFT]:
