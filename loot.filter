@@ -111,8 +111,11 @@ ItemDisplay[CRAFT]: %NAME%%DOT-63%
 //Hide Low Level Base Eth Items on Hell
 ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
 
-//Hide Magic Items, except Maps, Charms and Accesories!
+//Hide Magic Items, except Good Crafting bases, Maps, Charms and Accesories!
 ItemDisplay[MAG !ETH !AXE !hlm !xlm !ulm !plt !xlt !ult !spk !xpk !upk !vgl !xvg !uvg !mbl !zmb !umc !tbt !xtb !utb !SCEPTER !STAFF !WAND !msk !xsk !usk !ltp !xtp !utp !sml !xml !uml !lgl !xlg !ulg !vbl !zvb !uvc !lbt !xlb !ulb !MACE !fhl !xhl !uhl !fld !xld !uld !gts !xts !uts !mgl !xmg !umg !tbl !ztb !utc !mbt !xmb !umb !JAV !SPEAR !crn !xrn !urn !brs !xrs !urs !kit !xit !uit !hgl !xhg !uhg !lbl !zlb !ulc !mbt !xmb !umb !RW !cm1 !cm2 !cm3 !jew !rin !amu !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18]:
+
+//Hide Bad Magic Ethereal bases
+ItemDisplay[MAG AND ETH !AXE !hlm !xlm !ulm !plt !xlt !ult !spk !xpk !upk !vgl !xvg !uvg !mbl !zmb !umc !tbt !xtb !utb !SCEPTER !STAFF !WAND !msk !xsk !usk !ltp !xtp !utp !sml !xml !uml !lgl !xlg !ulg !vbl !zvb !uvc !lbt !xlb !ulb !MACE !fhl !xhl !uhl !fld !xld !uld !gts !xts !uts !mgl !xmg !umg !tbl !ztb !utc !mbt !xmb !umb !JAV !SPEAR !crn !xrn !urn !brs !xrs !urs !kit !xit !uit !hgl !xhg !uhg !lbl !zlb !ulc !mbt !xmb !umb]: 
 
 //Show Ethereal
 ItemDisplay[ETH]: %NAME%%NL%%GRAY%Ethereal%CONTINUE%
