@@ -105,8 +105,112 @@ ItemDisplay[GEMTYPE=7 DIFF<1]: %GRAY%%NAME%
 //Show Socketed Items
 ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%] %CONTINUE%
 
+//Show Crafted Gear 
+ItemDisplay[CRAFT]: %NAME%%DOT-63%
+
 //Hide Low Level Base Eth Items on Hell
 ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
+
+//Hide Magic Items, except Maps, Charms and Accesories!
+ItemDisplay[MAG !RW !cm1 !cm2 !cm3 !jew !rin !amu !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18]:
+
+//Show Magic Crafting Recipes
+//Blood Items-------------------
+//Blood Axe
+ItemDisplay[MAG AND AXE AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Ort Rune + Perfect Ruby}
+ItemDisplay[MAG AND AXE AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Ort Rune + Perfect Ruby}
+//Blood Helm
+ItemDisplay[MAG AND (hlm OR xlm OR ulm) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Ral Rune + Perfect Ruby}
+ItemDisplay[MAG AND ulm AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Ral Rune + Perfect Ruby}
+//Blood Armor
+ItemDisplay[MAG AND (plt OR xlt OR ult) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Thul Rune + Perfect Ruby}
+ItemDisplay[MAG AND ult AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Thul Rune + Perfect Ruby}
+//Blood Shield
+ItemDisplay[MAG AND (spk OR xpk OR upk) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Ith Rune + Perfect Ruby}
+ItemDisplay[MAG AND upk AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Ith Rune + Perfect Ruby}
+//Blood Gloves
+ItemDisplay[MAG AND (vgl OR xvg OR uvg) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Nef Rune + Perfect Ruby}
+ItemDisplay[MAG AND uvg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Nef Rune + Perfect Ruby}
+//Blood Belt
+ItemDisplay[MAG AND (mbl OR zmb OR umc) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Tal Rune + Perfect Ruby}
+ItemDisplay[MAG AND umc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Tal Rune + Perfect Ruby}
+//Blood Boots
+ItemDisplay[MAG AND (tbt OR xtb OR utb) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Eth Rune + Perfect Ruby}
+ItemDisplay[MAG AND utb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Eth Rune + Perfect Ruby}
+
+//Caster Items ------------------
+//Caster Weapon
+ItemDisplay[MAG AND (SCEPTER OR STAFF OR WAND) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire%NL%Caster: Jewel + Tir Rune + Perfect Amethyst}
+ItemDisplay[MAG AND (SCEPTER OR STAFF OR WAND) AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire%NL%Caster: Jewel + Tir Rune + Perfect Amethyst}
+//Caster Helm 
+ItemDisplay[MAG AND (msk OR xsk OR usk) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Nef Rune + Perfect Amethyst}
+ItemDisplay[MAG AND usk AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Nef Rune + Perfect Amethyst}
+//Caster Armor
+ItemDisplay[MAG AND (ltp OR xtp OR utp) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Tal Rune + Perfect Amethyst}
+ItemDisplay[MAG AND utp AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Tal Rune + Perfect Amethyst}
+//Caster Shield 
+ItemDisplay[MAG AND (sml OR xml OR uml) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Eth Rune + Perfect Amethyst}
+ItemDisplay[MAG AND uml AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Eth Rune + Perfect Amethyst}
+//Caster Gloves
+ItemDisplay[MAG AND (lgl OR xlg OR ulg) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Ort Rune + Perfect Amethyst}
+ItemDisplay[MAG AND ulg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Ort Rune + Perfect Amethyst}
+//Caster Belt 
+ItemDisplay[MAG AND (vbl OR zvb OR uvc) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Ith Rune + Perfect Amethyst}
+ItemDisplay[MAG AND uvc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Ith Rune + Perfect Amethyst}
+//Caster Boots
+ItemDisplay[MAG AND (lbt OR xlb OR ulb) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Thul Rune + Perfect Amethyst}
+ItemDisplay[MAG AND ulb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Thul Rune + Perfect Amethyst}
+
+//Power Items ------------------
+//Power Weapon
+ItemDisplay[MAG AND MACE AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire}
+ItemDisplay[MAG AND MACE AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire}
+//Power Helm 
+ItemDisplay[MAG AND (fhl OR xhl OR uhl) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Ith Rune + Perfect Sapphire}
+ItemDisplay[MAG AND uhl AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Ith Rune + Perfect Sapphire}
+//Power Armor 
+ItemDisplay[MAG AND (fld OR xld OR uld) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Nef Rune + Perfect Sapphire}
+ItemDisplay[MAG AND uld AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Nef Rune + Perfect Sapphire}
+//Power Shield 
+ItemDisplay[MAG AND (gts OR xts OR uts) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Eth Rune + Perfect Sapphire}
+ItemDisplay[MAG AND uts AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Eth Rune + Perfect Sapphire}
+//Power Gloves
+ItemDisplay[MAG AND (mgl OR xmg OR umg) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Ort Rune + Perfect Sapphire}
+ItemDisplay[MAG AND umg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Ort Rune + Perfect Sapphire}
+//Power Belt
+ItemDisplay[MAG AND (tbl OR ztb OR utc) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Tal Rune + Perfect Sapphire}
+ItemDisplay[MAG AND utc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Tal Rune + Perfect Sapphire}
+//Power Boots 
+ItemDisplay[MAG AND (mbt OR xmb OR umb) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Ral Rune + Perfect Sapphire}
+ItemDisplay[MAG AND umb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Ral Rune + Perfect Sapphire}
+
+//Safety Items ------------------
+//Safety Weapon
+ItemDisplay[MAG AND (JAV OR SPEAR) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Sol Rune + Perfect Emerald}
+ItemDisplay[MAG AND (JAV OR SPEAR) AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Sol Rune + Perfect Emerald}
+//Safety Helm
+ItemDisplay[MAG AND (crn OR xrn OR urn) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Ith Rune + Perfect Emerald}
+ItemDisplay[MAG AND urn AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ith Rune + Perfect Emerald}
+//Safety Armor 
+ItemDisplay[MAG AND (brs OR xrs OR urs) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Eth Rune + Perfect Emerald}
+ItemDisplay[MAG AND urs AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Eth Rune + Perfect Emerald}
+//Safety Shield
+ItemDisplay[MAG AND (kit OR xit OR uit) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Nef Rune + Perfect Emerald}
+ItemDisplay[MAG AND uit AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Nef Rune + Perfect Emerald}
+//Safety Gloves
+ItemDisplay[MAG AND (hgl OR xhg OR uhg) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Ral Rune + Perfect Emerald}
+ItemDisplay[MAG AND uhg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ral Rune + Perfect Emerald}
+//Safety Belt 
+ItemDisplay[MAG AND (lbl OR zlb OR ulc) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Tal Rune + Perfect Emerald}
+ItemDisplay[MAG AND ulc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Tal Rune + Perfect Emerald}
+//Safety Boots 
+ItemDisplay[MAG AND (mbt OR xmb OR umb) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Ort Rune + Perfect Emerald}
+ItemDisplay[MAG AND umb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ort Rune + Perfect Emerald}
+
+//Magic Amulets
+ItemDisplay[MAG AND (amu)]: %NAME%{%GRAY%Safe:Jewel+Thul+PerfectEmerald%NL%Power:Jewel+Thul+PerfectSapphire%NL%Caster:Jewel+Ral+PerfectAmethyst%NL%Blood:Jewel+Amn+PerfectRuby}
+//Magic Rings
+ItemDisplay[MAG AND (rin)]: %NAME%{%GRAY%Safe:Jewel+Amn+PerfectEmerald%NL%Power:Jewel+Amn+PerfectSapphire%NL%Caster:Jewel+Amn+PerfectAmethyst%NL%Blood:Jewel+Sol+PerfectRuby}
 
 //Show Ethereal Items
 ItemDisplay[ETH AND SOCK=0 !NMAG DIFF<2]: %NAME%%NL%%GRAY%Ethereal
@@ -196,7 +300,4 @@ ItemDisplay[WEAPON AND SOCK=6 !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Bre
 
 //Hide Regular Non-Socketed Items, except Maps, Quest items, Potions and Tomes after lvl 19!
 ItemDisplay[NMAG AND SOCK=0 !RW !bks !bkd !hdm !ass !box !msf !vip !hst !j34 !g34 !xyz !g33 !bbb !qbr !qey !qhr !qf1 !qf2 !mss !hfh !ice !tr2 !tes !ceh !bet !fed !toa !pk1 !pk2 !pk3 !dhn !bey !mbr !wss !lbox !dcma !dcbl !dcho !dcso !imra !imma !scou !rera !upma !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18 !key !leg !std !hp1 !hp2 !hp3 !hp4 !hp5 !mp1 !mp2 !mp3 !mp4 !mp5 !rvl !rvs !tsc !isc !tbk !ibk CLVL>19]:
-
-//Hide Magic Items, except Maps, Charms and Accesories after lvl 19!
-ItemDisplay[MAG !RW !cm1 !cm2 !cm3 !jew !rin !amu !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18 CLVL>19]:
 
