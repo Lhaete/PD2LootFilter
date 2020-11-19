@@ -31,8 +31,8 @@ ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %NAME%%DOT-62
 //Hide Junk Potions
 ItemDisplay[wms OR vps OR opl OR opm OR ops OR gpl OR gpm OR gps]:
 
-//Hide Arrows, Bolts, and Scrolls After Diffuculty 1
-ItemDisplay[tsc OR isc OR aqv OR cqv OR yps DIFF>1]:
+//Hide Arrows, Bolts, and Scrolls After Normal Diffuculty
+ItemDisplay[tsc OR isc OR aqv OR cqv OR yps DIFF>0]:
 
 //Show Keys, Arrows, Bolts
 ItemDisplay[key OR aqv OR cqv]: %GRAY%%NAME%
@@ -57,8 +57,7 @@ ItemDisplay[rvl]: %PURPLE%* %WHITE%Full Potion
 ItemDisplay[yps]: %GREEN%* %GRAY%Antidote
 
 //Hide Smaller Piles of Gold
-ItemDisplay[GOLD<100 DIFF>0]:
-ItemDisplay[GOLD<500 DIFF>1]:
+ItemDisplay[GOLD<250 DIFF=1]:
 ItemDisplay[GOLD<2500 DIFF=2]:
 
 
@@ -110,7 +109,8 @@ ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%] %CONTINUE%
 ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
 
 //Show Ethereal Items
-ItemDisplay[ETH AND SOCK=0]: %NAME%%NL%%GRAY%Ethereal
+ItemDisplay[ETH AND SOCK=0 !NMAG DIFF<2]: %NAME%%NL%%GRAY%Ethereal
+ItemDisplay[ETH AND SOCK=0 DIFF=2]: %NAME%%NL%%GRAY%Ethereal
 ItemDisplay[ETH AND SOCK>0]: %NAME%%NL%%GRAY%Ethereal%CONTINUE%
 
 //Hide Single Socketed Items
@@ -125,11 +125,11 @@ ItemDisplay[SOCK>0 AND NORM OR EXC !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
 //Hide Inferior Armor and Weapons (Crude, Damaged, Cracked etc)
 ItemDisplay[INF (ARMOR OR WEAPON)]:
 
-//Hide Normal Items if on Nightmare
-ItemDisplay[NMAG AND NORM (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=1]:
+//Hide Normal Items on Nightmare
+ItemDisplay[NMAG OR MAG AND NORM AND (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=1]:
 
-//Hide Normal & Exceptional Items if on Hell 
-ItemDisplay[NMAG AND NORM OR EXC (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
+//Hide Normal & Exceptional Items on Hell 
+ItemDisplay[NMAG OR MAG AND NORM OR EXC AND (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
 
 //Show Elite Crafting Bases
 ItemDisplay[NMAG OR MAG AND ELT AND (ARMOR OR WEAPON) AND SOCK=0 ILVL>71 !RW !RARE !UNI !SET !CRAFT]: %NAME%
