@@ -14,13 +14,13 @@ ItemDisplay[RUNE>0]: %RUNENAME% Rune [%RUNENUM%]{%GRAY%Cube to swap between stac
 //General --------------------------------------------------------------
 
 //Show Item Notifications
-ItemDisplay[RARE]: %NAME%%DOT-0C%%CONTINUE%//								     Rares
-ItemDisplay[RUNE>0]: %NAME%%DOT-62%//			  							     Runes
-ItemDisplay[cm1 OR cm2 OR cm3]: %NAME%%DOT-97%// 							     Charms
-ItemDisplay[wss]: %NAME%%DOT-9B%{Corrupts an item, modifying it unpredictably}// WorldStone
-ItemDisplay[UNI]: %NAME%%DOT-63%%CONTINUE%//    							     Uniques
-ItemDisplay[SET]: %NAME%%DOT-7D%%CONTINUE%//    							     Set Items
-ItemDisplay[leg]: %GOLD%%NAME%%PX-63%//											 Wirts Leg
+ItemDisplay[RARE]: %NAME%%DOT-0C%%CONTINUE%//Rares
+ItemDisplay[RUNE>0]: %NAME%%DOT-62%//Runes
+ItemDisplay[cm1 OR cm2 OR cm3]: %NAME%%DOT-97%//Charms
+ItemDisplay[wss]: %NAME%%DOT-9B%{Corrupts an item, modifying it unpredictably}//WorldStone
+ItemDisplay[UNI]: %NAME%%DOT-63%%CONTINUE%//Uniques
+ItemDisplay[SET]: %NAME%%DOT-7D%%CONTINUE%//Set Items
+ItemDisplay[leg]: %GOLD%%NAME%%PX-63%//Wirts Leg
 
 //Special Quest Item Notifications
 ItemDisplay[tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR dcma OR dcbl OR dcho OR dcso]: %ORANGE%%NAME%%DOT-62%
