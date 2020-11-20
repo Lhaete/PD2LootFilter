@@ -31,30 +31,25 @@ ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %NAME%%DOT-62
 //Hide Junk Potions
 ItemDisplay[wms OR vps OR opl OR opm OR ops OR gpl OR gpm OR gps]:
 
-//Hide Arrows, Bolts, and Scrolls After Normal Diffuculty
-ItemDisplay[tsc OR isc OR aqv OR cqv OR yps DIFF>0]:
+//Hide Arrows, Bolts, and Scrolls After lvl 9
+ItemDisplay[tsc OR isc OR aqv OR cqv OR yps CLVL>9]:
 
 //Show Keys, Arrows, Bolts
 ItemDisplay[key OR aqv OR cqv]: %GRAY%%NAME%
 
 //Show Scrolls
-ItemDisplay[isc]: %RED%* %GRAY%Identify Scroll
-ItemDisplay[tsc]: %BLUE%* %GRAY%Portal Scroll
+ItemDisplay[isc]: %RED%* %GRAY%Identify
+ItemDisplay[tsc]: %BLUE%* %GRAY%Portal
 
-//Hide Healing & Mana Potions at Act AreaLvl Breakpoints
-ItemDisplay[hp1 OR mp1 CLVL>10]:
-ItemDisplay[hp2 OR mp2 CLVL>15]:
-ItemDisplay[hp3 OR mp3 CLVL>19]:
-ItemDisplay[hp4 OR mp4 CLVL>39]:
+//Hide all leveling Healing & Mana Potions
+ItemDisplay[hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 CLVL>19]:
 
 //Show Rejuvination, Health & Mana Potions
-ItemDisplay[hp1 OR hp2 OR hp3 OR hp4]: %RED%* %WHITE%%NAME%
-ItemDisplay[mp1 OR mp2 OR mp3 OR mp4]: %BLUE%* %WHITE%%NAME%
-ItemDisplay[hp5]: %RED%* %WHITE%Health Potion
-ItemDisplay[mp5]: %BLUE%* %WHITE%Mana Potion
-ItemDisplay[rvs]: %PURPLE%* %WHITE%Potion
-ItemDisplay[rvl]: %PURPLE%* %WHITE%Full Potion
-ItemDisplay[yps]: %GREEN%* %GRAY%Antidote
+ItemDisplay[hp1 OR hp2 OR hp3 OR hp4 OR hp5]: %RED%* %WHITE%HP
+ItemDisplay[mp1 OR mp2 OR mp3 OR mp4 OR mp5]: %BLUE%* %WHITE%MP
+ItemDisplay[rvs]: %PURPLE%* %WHITE%RP
+ItemDisplay[rvl]: %PURPLE%* %WHITE%FP
+ItemDisplay[yps]: %GREEN%* %GRAY%AP
 
 //Hide Smaller Piles of Gold
 ItemDisplay[GOLD<250 DIFF=1]:
@@ -276,7 +271,7 @@ ItemDisplay[WEAPON AND SOCK=2 AND (JAV OR BOW OR XBOW) !MAG !RARE !UNI !SET !CRA
 ItemDisplay[WEAPON AND SOCK=2 AND STAFF !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Leaf: Tir*Ral%NL%Strength: Amn*Tir}
 //-----------------------
 ItemDisplay[WEAPON AND SOCK=3 !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Plague: Cham*Fal*Um%NL%Venom: Tal*Dol*Mal}%CONTINUE%
-ItemDisplay[WEAPON AND SOCK=3 AND (AXE OR SWORD OR POLEARM OR SPEAR OR DAGGER OR MACE OR STAFF OR SCEPTER) !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Fury: Jah*Gul*Eth%NL%Malice: Ith*El*Eth%NL%Wind: Sur*Sur*El%NL%Plague: Cham*Fal*Um%NL%Venom: Tal*Dol*Mal}%CONTINUE%
+ItemDisplay[WEAPON AND SOCK=3 AND (AXE OR SWORD OR POLEARM OR SPEAR OR DAGGER OR MACE OR STAFF OR SCEPTER) !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Fury: Jah*Gul*Eth%NL%Malice: Ith*El*Eth%NL%Wind: Sur*Sur*El%NL%Plague: Cham*Fal*Um%NL%Venom: Tal*Dol*Mal}
 ItemDisplay[WEAPON AND SOCK=3 AND (JAV OR BOW OR XBOW) !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Melody: Shael*Ko*Nef%NL%Edge: Tir*Tal*Amn%NL%Plague: Cham*Fal*Um%NL%Venom: Tal*Dol*Mal}
 //----------------------
 ItemDisplay[WEAPON AND SOCK=4 !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Fortitude: El*Sol*Dol*Lo%NL%Passion: Dol*Ort*Eld*Lem}%CONTINUE%
