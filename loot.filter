@@ -1,17 +1,48 @@
 // Lhaetes Filter 2020-2021---------------------------------------------
+//***** FILTER v1.1 *******---------------------------------------------
+
+//Change Log -----------------------------------------------------------
+//- v 1.1 --------------------------------------------------------------
+//	 *Add, Show Player Ears
+//	 *Add, Prefix Class names to Torches and Skill Charms!
+//	 *Add, Horadric Scroll 
+//	 *Change, Edited colors and descriptions of Map Recipes from Shop
+//	 *Change, Show Runeword Normal & Exceptional Socketed Bases on Hell
+//	 *Change, Magic belts/gloves/boots/shields now show all recipes
+//	 *Change, Shows even less junk!
 //----------------------------------------------------------------------
+
 
 //Project Diablo 2 Items -----------------------------------------------
 
-ItemDisplay[imma]: %NAME%{%WHITE%Cube with: %WHITE%Normal Map + %BLUE%Jewel %WHITE%to make a %BLUE%Magic Map}
-ItemDisplay[imra]: %NAME%{%WHITE%Cube with: %WHITE%Normal Map + %BLUE%Jewel %WHITE%+ %ORANGE%Thul [10]+ %WHITE%to make a %YELLOW%Rare Map}
-ItemDisplay[rera]: %NAME%{%WHITE%Cube with: %YELLOW%Rare Map + %WHITE%Perfect Gem + %ORANGE%Thul [10]+ %WHITE%to make a %YELLOW%Rare Map}
-ItemDisplay[scou]: %NAME%{%WHITE%Cube with: %WHITE%Any Map + %ORANGE%Hel %WHITE%to make a %WHITE%White Map}
-ItemDisplay[upma]: %NAME%{%WHITE%Cube with: %BLUE%Magic Map + %ORANGE%Thul [10]+  + %WHITE%Perfect Skull to make a %YELLOW%Rare Map}
+ItemDisplay[imma]: %NAME%{%GRAY%Normal Map + Jewel%NL%%BLUE%Upgrades a Normal Map to a Magic Map}
+ItemDisplay[imra]: %NAME%{%GRAY%Normal Map + Jewel + Thul Rune%NL%%BLUE%Upgrades a Normal Map to a Rare Map}
+ItemDisplay[rera]: %NAME%{%GRAY%Rare Map + Perfect Gem + Thul Rune%NL%%BLUE%Reforges a rare map with new random modifiers}
+ItemDisplay[scou]: %NAME%{%GRAY%Any Map + Hel Rune%NL%%BLUE%Removes all modifiers from a Map}
+ItemDisplay[upma]: %NAME%{%GRAY%Magic Map + Thul Rune + Perfect Skull%NL%%BLUE%Upgrades a Magic Map to a Rare Map}
 ItemDisplay[lbox]: %NAME%%DOT-20%
 ItemDisplay[RUNE>0]: %RUNENAME% Rune [%RUNENUM%]{%GRAY%Cube to swap between stackable and socketable version}
 
+
 //General --------------------------------------------------------------
+
+//Prefix Class Name to Torches
+ItemDisplay[cm2 CLSK0>0]: %NAME%%NL%Amazon's
+ItemDisplay[cm2 CLSK1>0]: %NAME%%NL%Sorceress'
+ItemDisplay[cm2 CLSK2>0]: %NAME%%NL%Necromancer's
+ItemDisplay[cm2 CLSK3>0]: %NAME%%NL%Paladin's
+ItemDisplay[cm2 CLSK4>0]: %NAME%%NL%Barbarian's
+ItemDisplay[cm2 CLSK5>0]: %NAME%%NL%Druid's
+ItemDisplay[cm2 CLSK6>0]: %NAME%%NL%Assassin's
+
+//Prefix Class Name to Skillers
+ItemDisplay[cm3 (TABSK0>0 OR TABSK1>0 OR TABSK2>0)]: %NAME%%NL%Amazon's
+ItemDisplay[cm3 (TABSK8>0 OR TABSK9>0 OR TABSK10>0)]: %NAME%%NL%Sorceress'
+ItemDisplay[cm3 (TABSK16>0 OR TABSK17>0 OR TABSK18>0)]: %NAME%%NL%Necromancer's
+ItemDisplay[cm3 (TABSK24>0 OR TABSK25>0 OR TABSK26>0)]: %NAME%%NL%Paladin's
+ItemDisplay[cm3 (TABSK32>0 OR TABSK33>0 OR TABSK34>0)]: %NAME%%NL%Barbarian's
+ItemDisplay[cm3 (TABSK40>0 OR TABSK41>0 OR TABSK42>0)]: %NAME%%NL%Druid's
+ItemDisplay[cm3 (TABSK48>0 OR TABSK49>0 OR TABSK50>0)]: %NAME%%NL%Assassin's
 
 //Show Item Notifications
 ItemDisplay[RARE]: %NAME%%DOT-0C%%CONTINUE%//Rares
@@ -21,6 +52,10 @@ ItemDisplay[wss]: %NAME%%DOT-9B%{Corrupts an item, modifying it unpredictably}//
 ItemDisplay[UNI]: %NAME%%DOT-63%%CONTINUE%//Uniques
 ItemDisplay[SET]: %NAME%%DOT-7D%%CONTINUE%//Set Items
 ItemDisplay[leg]: %GOLD%%NAME%%PX-63%//Wirts Leg
+ItemDisplay[ear]: %GOLD%%NAME%%PX-63%//Players Ear
+
+//Quest Items
+ItemDisplay[bks OR bkd OR hdm OR tr1 OR ass OR box OR msf OR vip OR hst OR j34 OR g34 OR xyz OR g33 OR bbb OR qbr OR qey OR qhr OR qf1 OR qf2 OR mss OR hfh OR ice OR tr2]: %GOLD%%NAME%%PX-63%
 
 //Special Quest Item Notifications
 ItemDisplay[tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR dcma OR dcbl OR dcho OR dcso]: %ORANGE%%NAME%%DOT-62%
@@ -31,18 +66,18 @@ ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %NAME%%DOT-62
 //Hide Junk Potions
 ItemDisplay[wms OR vps OR opl OR opm OR ops OR gpl OR gpm OR gps]:
 
-//Hide Arrows, Bolts, and Scrolls After lvl 9
-ItemDisplay[tsc OR isc OR aqv OR cqv OR yps CLVL>9]:
+//Hide Arrows, Bolts, and Scrolls After lvl 29
+ItemDisplay[tsc OR isc OR aqv OR cqv OR yps CLVL>29]:
 
-//Show Keys, Arrows, Bolts
-ItemDisplay[key OR aqv OR cqv]: %GRAY%%NAME%
+//Show Keys, Arrows, Bolts, Tomes
+ItemDisplay[key OR aqv OR cqv OR tbk OR ibk]: %GRAY%%NAME%
 
 //Show Scrolls
 ItemDisplay[isc]: %RED%* %GRAY%Identify
 ItemDisplay[tsc]: %BLUE%* %GRAY%Portal
 
-//Hide all leveling Healing & Mana Potions
-ItemDisplay[hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 CLVL>19]:
+//Hide all leveling Healing & Mana Potions After lvl 29
+ItemDisplay[hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 CLVL>29]:
 
 //Show Rejuvination, Health & Mana Potions
 ItemDisplay[hp1 OR hp2 OR hp3 OR hp4 OR hp5]: %RED%* %WHITE%HP
@@ -100,139 +135,83 @@ ItemDisplay[GEMTYPE=7 DIFF<1]: %GRAY%%NAME%
 //Show Socketed Items
 ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%] %CONTINUE%
 
+//Show Completed RuneWord Gear
+ItemDisplay[RW]: %NAME%
+
 //Show Crafted Gear 
 ItemDisplay[CRAFT]: %NAME%%DOT-63%
 
-//Hide Low Level Base Eth Items on Hell
-ItemDisplay[NMAG AND ETH AND ILVL<41 AND DIFF=2]:
-
-//Hide Magic Items, except Good Crafting bases, Maps, Charms and Accesories!
-ItemDisplay[MAG !ETH !AXE !hlm !xlm !ulm !plt !xlt !ult !spk !xpk !upk !vgl !xvg !uvg !mbl !zmb !umc !tbt !xtb !utb !SCEPTER !STAFF !WAND !msk !xsk !usk !ltp !xtp !utp !sml !xml !uml !lgl !xlg !ulg !vbl !zvb !uvc !lbt !xlb !ulb !MACE !fhl !xhl !uhl !fld !xld !uld !gts !xts !uts !mgl !xmg !umg !tbl !ztb !utc !mbt !xmb !umb !JAV !SPEAR !crn !xrn !urn !brs !xrs !urs !kit !xit !uit !hgl !xhg !uhg !lbl !zlb !ulc !mbt !xmb !umb !RW !cm1 !cm2 !cm3 !jew !rin !amu !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18]:
-
-//Hide Bad Magic Ethereal bases
-ItemDisplay[MAG AND ETH !AXE !hlm !xlm !ulm !plt !xlt !ult !spk !xpk !upk !vgl !xvg !uvg !mbl !zmb !umc !tbt !xtb !utb !SCEPTER !STAFF !WAND !msk !xsk !usk !ltp !xtp !utp !sml !xml !uml !lgl !xlg !ulg !vbl !zvb !uvc !lbt !xlb !ulb !MACE !fhl !xhl !uhl !fld !xld !uld !gts !xts !uts !mgl !xmg !umg !tbl !ztb !utc !mbt !xmb !umb !JAV !SPEAR !crn !xrn !urn !brs !xrs !urs !kit !xit !uit !hgl !xhg !uhg !lbl !zlb !ulc !mbt !xmb !umb]: 
+//Hide White Belts, Boots and Gloves
+ItemDisplay[NMAG (BOOTS OR GLOVES OR BELT)]:
 
 //Show Ethereal
 ItemDisplay[ETH]: %NAME%%NL%%GRAY%Ethereal%CONTINUE%
 
+//Hide low ILVL Magic items on Hell
+ItemDisplay[MAG AND ILVL<71 DIFF=2]:
+
 //Show Magic Crafting Recipes
 //Blood Items-------------------
 //Blood Axe
-ItemDisplay[MAG AND AXE AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Ort Rune + Perfect Ruby}
-ItemDisplay[MAG AND AXE AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Ort Rune + Perfect Ruby}
+ItemDisplay[MAG AND AXE]: %NAME%{%GRAY%Blood: Jewel + Ort Rune + Perfect Ruby}
 //Blood Helm
-ItemDisplay[MAG AND (hlm OR xlm OR ulm) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Ral Rune + Perfect Ruby}
-ItemDisplay[MAG AND ulm AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Ral Rune + Perfect Ruby}
+ItemDisplay[MAG AND ulm]: %NAME%{%GRAY%Blood: Jewel + Ral Rune + Perfect Ruby}
 //Blood Armor
-ItemDisplay[MAG AND (plt OR xlt OR ult) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Thul Rune + Perfect Ruby}
-ItemDisplay[MAG AND ult AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Thul Rune + Perfect Ruby}
-//Blood Shield
-ItemDisplay[MAG AND (spk OR xpk OR upk) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Ith Rune + Perfect Ruby}
-ItemDisplay[MAG AND upk AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Ith Rune + Perfect Ruby}
-//Blood Gloves
-ItemDisplay[MAG AND (vgl OR xvg OR uvg) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Nef Rune + Perfect Ruby}
-ItemDisplay[MAG AND uvg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Nef Rune + Perfect Ruby}
-//Blood Belt
-ItemDisplay[MAG AND (mbl OR zmb OR umc) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Tal Rune + Perfect Ruby}
-ItemDisplay[MAG AND umc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Tal Rune + Perfect Ruby}
-//Blood Boots
-ItemDisplay[MAG AND (tbt OR xtb OR utb) AND DIFF<2]: %NAME%{%GRAY%Blood: Jewel + Eth Rune + Perfect Ruby}
-ItemDisplay[MAG AND utb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Blood: Jewel + Eth Rune + Perfect Ruby}
+ItemDisplay[MAG AND ult]: %NAME%{%GRAY%Blood: Jewel + Thul Rune + Perfect Ruby}
 
 //Caster Items ------------------
 //Caster Weapon
-ItemDisplay[MAG AND (SCEPTER OR STAFF OR WAND) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire%NL%Caster: Jewel + Tir Rune + Perfect Amethyst}
-ItemDisplay[MAG AND (SCEPTER OR STAFF OR WAND) AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire%NL%Caster: Jewel + Tir Rune + Perfect Amethyst}
+ItemDisplay[MAG AND (SCEPTER OR STAFF OR WAND)]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire%NL%Caster: Jewel + Tir Rune + Perfect Amethyst}
 //Caster Helm 
-ItemDisplay[MAG AND (msk OR xsk OR usk) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Nef Rune + Perfect Amethyst}
-ItemDisplay[MAG AND usk AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Nef Rune + Perfect Amethyst}
+ItemDisplay[MAG AND usk]: %NAME%{%GRAY%Caster: Jewel + Nef Rune + Perfect Amethyst}
 //Caster Armor
-ItemDisplay[MAG AND (ltp OR xtp OR utp) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Tal Rune + Perfect Amethyst}
-ItemDisplay[MAG AND utp AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Tal Rune + Perfect Amethyst}
-//Caster Shield 
-ItemDisplay[MAG AND (sml OR xml OR uml) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Eth Rune + Perfect Amethyst}
-ItemDisplay[MAG AND uml AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Eth Rune + Perfect Amethyst}
-//Caster Gloves
-ItemDisplay[MAG AND (lgl OR xlg OR ulg) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Ort Rune + Perfect Amethyst}
-ItemDisplay[MAG AND ulg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Ort Rune + Perfect Amethyst}
-//Caster Belt 
-ItemDisplay[MAG AND (vbl OR zvb OR uvc) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Ith Rune + Perfect Amethyst}
-ItemDisplay[MAG AND uvc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Ith Rune + Perfect Amethyst}
-//Caster Boots
-ItemDisplay[MAG AND (lbt OR xlb OR ulb) AND DIFF<2]: %NAME%{%GRAY%Caster: Jewel + Thul Rune + Perfect Amethyst}
-ItemDisplay[MAG AND ulb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Caster: Jewel + Thul Rune + Perfect Amethyst}
+ItemDisplay[MAG AND utp]: %NAME%{%GRAY%Caster: Jewel + Tal Rune + Perfect Amethyst}
 
 //Power Items ------------------
 //Power Weapon
-ItemDisplay[MAG AND MACE AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire}
-ItemDisplay[MAG AND MACE AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire}
+ItemDisplay[MAG AND MACE]: %NAME%{%GRAY%Power: Jewel + Tir Rune + Perfect Sapphire}
 //Power Helm 
-ItemDisplay[MAG AND (fhl OR xhl OR uhl) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Ith Rune + Perfect Sapphire}
-ItemDisplay[MAG AND uhl AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Ith Rune + Perfect Sapphire}
+ItemDisplay[MAG AND uhl]: %NAME%{%GRAY%Power: Jewel + Ith Rune + Perfect Sapphire}
 //Power Armor 
-ItemDisplay[MAG AND (fld OR xld OR uld) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Nef Rune + Perfect Sapphire}
-ItemDisplay[MAG AND uld AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Nef Rune + Perfect Sapphire}
-//Power Shield 
-ItemDisplay[MAG AND (gts OR xts OR uts) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Eth Rune + Perfect Sapphire}
-ItemDisplay[MAG AND uts AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Eth Rune + Perfect Sapphire}
-//Power Gloves
-ItemDisplay[MAG AND (mgl OR xmg OR umg) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Ort Rune + Perfect Sapphire}
-ItemDisplay[MAG AND umg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Ort Rune + Perfect Sapphire}
-//Power Belt
-ItemDisplay[MAG AND (tbl OR ztb OR utc) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Tal Rune + Perfect Sapphire}
-ItemDisplay[MAG AND utc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Tal Rune + Perfect Sapphire}
-//Power Boots 
-ItemDisplay[MAG AND (mbt OR xmb OR umb) AND DIFF<2]: %NAME%{%GRAY%Power: Jewel + Ral Rune + Perfect Sapphire}
-ItemDisplay[MAG AND umb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Power: Jewel + Ral Rune + Perfect Sapphire}
+ItemDisplay[MAG AND uld]: %NAME%{%GRAY%Power: Jewel + Nef Rune + Perfect Sapphire}
 
 //Safety Items ------------------
 //Safety Weapon
-ItemDisplay[MAG AND (JAV OR SPEAR) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Sol Rune + Perfect Emerald}
-ItemDisplay[MAG AND (JAV OR SPEAR) AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Sol Rune + Perfect Emerald}
+ItemDisplay[MAG AND (JAV OR SPEAR)]: %NAME%{%GRAY%Safe: Jewel + Sol Rune + Perfect Emerald}
 //Safety Helm
-ItemDisplay[MAG AND (crn OR xrn OR urn) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Ith Rune + Perfect Emerald}
-ItemDisplay[MAG AND urn AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ith Rune + Perfect Emerald}
+ItemDisplay[MAG AND urn]: %NAME%{%GRAY%Safe: Jewel + Ith Rune + Perfect Emerald}
 //Safety Armor 
-ItemDisplay[MAG AND (brs OR xrs OR urs) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Eth Rune + Perfect Emerald}
-ItemDisplay[MAG AND urs AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Eth Rune + Perfect Emerald}
-//Safety Shield
-ItemDisplay[MAG AND (kit OR xit OR uit) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Nef Rune + Perfect Emerald}
-ItemDisplay[MAG AND uit AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Nef Rune + Perfect Emerald}
-//Safety Gloves
-ItemDisplay[MAG AND (hgl OR xhg OR uhg) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Ral Rune + Perfect Emerald}
-ItemDisplay[MAG AND uhg AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ral Rune + Perfect Emerald}
-//Safety Belt 
-ItemDisplay[MAG AND (lbl OR zlb OR ulc) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Tal Rune + Perfect Emerald}
-ItemDisplay[MAG AND ulc AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Tal Rune + Perfect Emerald}
-//Safety Boots 
-ItemDisplay[MAG AND (mbt OR xmb OR umb) AND DIFF<2]: %NAME%{%GRAY%Safe: Jewel + Ort Rune + Perfect Emerald}
-ItemDisplay[MAG AND umb AND ILVL>71 AND DIFF=2]: %NAME%{%GRAY%Safe: Jewel + Ort Rune + Perfect Emerald}
+ItemDisplay[MAG AND urs]: %NAME%{%GRAY%Safe: Jewel + Eth Rune + Perfect Emerald}
+
+//Magic Shields
+ItemDisplay[MAG AND SHIELD]: %NAME%{%GRAY%Safe:Jewel+Nef+PerfectEmerald%NL%Power:Jewel+Eth+PerfectSapphire%NL%Caster:Jewel+Eth+PerfectAmethyst%NL%Blood:Jewel+Ith+PerfectRuby}
+
+//Magic Gloves
+ItemDisplay[MAG AND GLOVES]: %NAME%{%GRAY%Safe:Jewel+Ral+PerfectEmerald%NL%Power:Jewel+Ort+PerfectSapphire%NL%Caster:Jewel+Ort+PerfectAmethyst%NL%Blood:Jewel+Nef+PerfectRuby}
+
+//Magic Boots
+ItemDisplay[MAG AND BOOTS]: %NAME%{%GRAY%Safe:Jewel+Ort+PerfectEmerald%NL%Power:Jewel+Ral+PerfectSapphire%NL%Caster:Jewel+Thul+PerfectAmethyst%NL%Blood:Jewel+Eth+PerfectRuby}
+
+//Magic Belts
+ItemDisplay[MAG AND BELTS]: %NAME%{%GRAY%Safe:Jewel+Tal+PerfectEmerald%NL%Power:Jewel+Tal+PerfectSapphire%NL%Caster:Jewel+Ith+PerfectAmethyst%NL%Blood:Jewel+Tal+PerfectRuby}
 
 //Magic Amulets
 ItemDisplay[MAG AND amu]: %NAME%{%GRAY%Safe:Jewel+Thul+PerfectEmerald%NL%Power:Jewel+Thul+PerfectSapphire%NL%Caster:Jewel+Ral+PerfectAmethyst%NL%Blood:Jewel+Amn+PerfectRuby}
+
 //Magic Rings
 ItemDisplay[MAG AND rin]: %NAME%{%GRAY%Safe:Jewel+Amn+PerfectEmerald%NL%Power:Jewel+Amn+PerfectSapphire%NL%Caster:Jewel+Amn+PerfectAmethyst%NL%Blood:Jewel+Sol+PerfectRuby}
 
-//Hide Single Socketed Items
+//Hide Single Socketed Items except uniques/set etc
 ItemDisplay[SOCK=1 !MAG !RARE !UNI !SET !CRAFT]:
 
-//Hide Socketed Normal Items on Nightmare
-ItemDisplay[SOCK>0 AND NORM !RW !RARE !leg !UNI !SET !CRAFT DIFF=1]:
-
-//Hide Socketed Normal & Exceptional Items on Hell
-ItemDisplay[SOCK>0 AND NORM OR EXC !ETH !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
+//Hide Low ILVL Socketed Gear on Hell
+ItemDisplay[SOCK>0 ILVL<41 DIFF=2]: 
 
 //Hide Inferior Armor and Weapons (Crude, Damaged, Cracked etc)
 ItemDisplay[INF (ARMOR OR WEAPON)]:
 
-//Hide Normal Items on Nightmare
-ItemDisplay[NMAG OR MAG AND NORM AND (ARMOR OR WEAPON) !RW !RARE !leg !UNI !SET !CRAFT DIFF=1]:
-
-//Hide Normal & Exceptional Items on Hell 
-ItemDisplay[NMAG OR MAG AND NORM OR EXC AND (ARMOR OR WEAPON) !ETH !RW !RARE !leg !UNI !SET !CRAFT DIFF=2]:
-
-//Show Elite Crafting Bases
-ItemDisplay[NMAG OR MAG AND ELT AND (ARMOR OR WEAPON) AND SOCK=0 ILVL>71 !RW !RARE !UNI !SET !CRAFT]: %NAME%
+//Show Elite White Crafting Bases, TODO: Prune bases, (exclude more trash)
+ItemDisplay[NMAG AND ELT AND (ARMOR OR WEAPON) AND SOCK=0 ILVL>71 !RW !RARE !UNI !SET !CRAFT !THROWING]: %NAME%
 
 //Append Upgrade Recipes to Set, Unique & Rare Items
 //Rare Armor
@@ -284,8 +263,8 @@ ItemDisplay[WEAPON AND SOCK=4 AND STAFF !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%
 ItemDisplay[WEAPON AND SOCK=4 AND (JAV OR BOW OR XBOW) !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Harmony: Tir*Ith*Sol*Ko%NL%Wrath: Pul*Lum*Ber*Mal%NL%Brand: Jah*Lo*Mal*Gul%NL%Faith: Ohm*Jah*Lem*Eld%NL%Ice: Amn*Shael*Jah*Lo}
 //------------------------
 ItemDisplay[WEAPON AND SOCK=5 AND (AXE OR MACE OR SWORD OR SPEAR OR POLEARM OR STAFF) !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Honor: Amn*El*Ith*Tir*Sol}%CONTINUE%
-ItemDisplay[WEAPON AND SOCK=5 AND AXE !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Beast: Ber*Tir*Um*Mal*Lum%NL%Death: Hel*El*Vex*Ort*Gul%NL%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Honor: Amn*El*Ith*Tir*Sol}
-ItemDisplay[WEAPON AND SOCK=5 AND SWORD !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Destruction: Vex*Lo*Ber*Jah*Ko%NL%Death: Hel*El*Vex*Ort*Gul%NL%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Honor: Amn*El*Ith*Tir*Sol}
+ItemDisplay[WEAPON AND SOCK=5 AND AXE !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Beast: Ber*Tir*Um*Mal*Lum%NL%Death: Hel*El*Vex*Ort*Gul%NL%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Grief: Eth*Tir*Lo*Mal*Ral}
+ItemDisplay[WEAPON AND SOCK=5 AND SWORD !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Destruction: Vex*Lo*Ber*Jah*Ko%NL%Death: Hel*El*Vex*Ort*Gul%NL%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Grief: Eth*Tir*Lo*Mal*Ral}
 ItemDisplay[WEAPON AND SOCK=5 AND SCEPTER !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Beast: Ber*Tir*Um*Mal*Lum%NL%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Honor: Amn*El*Ith*Tir*Sol}
 ItemDisplay[WEAPON AND SOCK=5 AND (SPEAR OR POLEARM) !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Destruction: Vex*Lo*Ber*Jah*Ko%NL%Obedience: Hel*Ko*Thul*Eth*Fal%NL%Eternity: Amn*Ber*Ist*Sol*Sur%NL%Honor: Amn*El*Ith*Tir*Sol}
 //-------------------------
@@ -294,6 +273,5 @@ ItemDisplay[WEAPON AND SOCK=6 !MAG !RARE !UNI !SET !CRAFT !RW]: %NAME%{%GRAY%Bre
 
 //Reset -----------------------------------------------------------------
 
-//Hide Regular Non-Socketed Items, except Maps, Quest items, Potions and Tomes after lvl 19!
-ItemDisplay[NMAG AND SOCK=0 !ETH !RW !bks !bkd !hdm !ass !box !msf !vip !hst !j34 !g34 !xyz !g33 !bbb !qbr !qey !qhr !qf1 !qf2 !mss !hfh !ice !tr2 !tes !ceh !bet !fed !toa !pk1 !pk2 !pk3 !dhn !bey !mbr !wss !lbox !dcma !dcbl !dcho !dcso !imra !imma !scou !rera !upma !t11 !t12 !t13 !t14 !t15 !t16 !t17 !t18 !key !leg !std !hp1 !hp2 !hp3 !hp4 !hp5 !mp1 !mp2 !mp3 !mp4 !mp5 !rvl !rvs !tsc !isc !tbk !ibk]:
-
+//Hide Regular and Magic Items
+ItemDisplay[NMAG OR MAG]:
